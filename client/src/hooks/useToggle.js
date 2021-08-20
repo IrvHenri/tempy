@@ -4,3 +4,5 @@ const useToggle = (initialValue = false) => {
   const toggle = useCallback(() => setValue((value) => !value), []);
   return [value, toggle];
 };
+
+export default useToggle;

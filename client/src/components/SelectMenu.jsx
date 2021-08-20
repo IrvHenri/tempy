@@ -39,7 +39,11 @@ const SelectMenu = ({ cityData, cityId, handleChange }) => {
           </MenuItem>
           {menuItems}
         </Select>
-        <FormHelperText>Please select city to see the forecast</FormHelperText>
+        {!cityId && (
+          <FormHelperText>
+            Please select city to see the forecast
+          </FormHelperText>
+        )}
       </FormControl>
     </>
   );
