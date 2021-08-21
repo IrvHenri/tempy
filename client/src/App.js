@@ -16,7 +16,7 @@ function App() {
   const [cityWeatherData, loading] = useCityWeatherData(cityId);
   const { currentWeatherData, forecastWeatherData } = cityWeatherData;
   let tableData = tableDataHelper(forecastWeatherData);
-  console.log(loading);
+
   const handleChange = (event) => {
     setCityId(event.target.value);
     if (isToggled) {
