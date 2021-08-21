@@ -20,7 +20,6 @@ export const windSpeedConversionTableCell = (wind) => {
 export const convertDate = (unix) => {
   let result = fromUnixTime(unix);
   return format(new Date(result), "dd MMM ha");
-  // return format(new Date(timeString), "dd MMM ha");
 };
 
 export const convertDateTableButton = (timeString) => {

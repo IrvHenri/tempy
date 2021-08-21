@@ -10,11 +10,6 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 
-const useStyles = makeStyles({
-  table: {
-    minWidth: 650,
-  },
-});
 const {
   temperatureConversion,
   temperatureConversionMinMax,
@@ -22,6 +17,12 @@ const {
   convertDate,
   convertDateTableButton,
 } = CityProfileHelpers;
+
+const useStyles = makeStyles({
+  table: {
+    minWidth: 650,
+  },
+});
 const CityWeatherTable = ({ tableData }) => {
   const classes = useStyles();
   const [tableMode, setTableMode] = useState(tableData[0]);
