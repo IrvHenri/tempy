@@ -41,7 +41,7 @@ const CityWeatherTable = ({ tableData }) => {
       );
     });
   return (
-    <div>
+    <div className="city-weather-table">
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="simple table">
           <TableHead>

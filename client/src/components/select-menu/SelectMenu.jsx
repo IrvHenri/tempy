@@ -4,6 +4,8 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import FormHelperText from "@material-ui/core/FormHelperText";
+import "./index.css";
+
 const useStyles = makeStyles((theme) => ({
   button: {
     display: "block",
@@ -26,7 +28,7 @@ const SelectMenu = ({ cityData, cityId, handleChange }) => {
       </MenuItem>
     ));
   return (
-    <>
+    <div className="select-menu">
       <FormControl className={classes.formControl}>
         <InputLabel id="demo-controlled-open-select-label">City</InputLabel>
         <Select
@@ -45,7 +47,7 @@ const SelectMenu = ({ cityData, cityId, handleChange }) => {
           </FormHelperText>
         )}
       </FormControl>
-    </>
+    </div>
   );
 };
 

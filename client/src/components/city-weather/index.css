@@ -1,0 +1,16 @@
+.city-profile {
+  margin-bottom: 1em;
+}
+
+.city-profile article {
+  margin: 1em 0;
+}
+
+.city-weather-table {
+  margin-top: 1em;
+}
+
+.table-button-container button {
+  margin-right: 1em;
+  margin-top: 1em;
+}
