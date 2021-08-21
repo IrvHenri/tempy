@@ -13,10 +13,10 @@ function App() {
   const [cityId, setCityId] = useState("");
   const [cityData] = useCityData();
   const [isToggled, toggle] = useToggle();
-  const [cityWeatherData] = useCityWeatherData(cityId);
+  const [cityWeatherData, loading] = useCityWeatherData(cityId);
   const { currentWeatherData, forecastWeatherData } = cityWeatherData;
   let tableData = tableDataHelper(forecastWeatherData);
-
+  console.log(loading);
   const handleChange = (event) => {
     setCityId(event.target.value);
     if (isToggled) {
@@ -40,6 +40,7 @@ function App() {
             isToggled={isToggled}
             toggle={toggle}
             tableData={tableData}
+            loading={loading}
           />
         )}
       </main>

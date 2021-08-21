@@ -5,6 +5,7 @@ const useCityWeatherData = (cityId) => {
     currentWeatherData: {},
     forecastWeatherData: {},
   });
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     if (cityId) {
       axios
@@ -12,13 +13,14 @@ const useCityWeatherData = (cityId) => {
         .then((response) => {
           const { currentWeatherData, forecastWeatherData } = response.data;
           setCityWeatherData({ currentWeatherData, forecastWeatherData });
+          setLoading(false);
         })
         .catch((error) => {
           console.log(error);
         });
     }
   }, [cityId]);
-  return [cityWeatherData];
+  return [cityWeatherData, loading];
 };
 
 export default useCityWeatherData;
