@@ -2,19 +2,6 @@ import React from "react";
 import { BsGear, BsPersonFill } from "react-icons/bs";
 import TextField from "@material-ui/core/TextField";
 const Navbar = () => {
-  const styles = (theme) => ({
-    textField: {
-      width: "90%",
-      marginLeft: "auto",
-      marginRight: "auto",
-      paddingBottom: 0,
-      marginTop: 0,
-      fontWeight: 500,
-    },
-    input: {
-      color: "white",
-    },
-  });
   return (
     <nav>
       <span>
@@ -38,15 +25,17 @@ const Navbar = () => {
             },
           }}
         />
-        <span>
-          EN <BsGear />
-        </span>
-        <span>
-          My Account <BsGear />
-        </span>
-        <span>
-          Sign in <BsPersonFill />
-        </span>
+        <div className="setting-actions">
+          <span>
+            EN <BsGear />
+          </span>
+          <span>
+            My Account <BsGear />
+          </span>
+          <span>
+            Sign in <BsPersonFill />
+          </span>
+        </div>
       </div>
     </nav>
   );

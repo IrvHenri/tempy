@@ -1,9 +1,21 @@
 import React from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer>
-      <p>I'm a footer</p>
+      <span className="footer-logo">
+        <img src="/images/white_logo_transparent_background.png" alt="logo" />
+        <p>By Irving Henriquez</p>
+      </span>
+      <div className="footer-socials">
+        <a href="https://github.com/IrvHenri" target="_blank">
+          <FaGithub />
+        </a>
+        <a href="https://www.linkedin.com/in/irving-henriquez/" target="_blank">
+          <FaLinkedin />
+        </a>
+      </div>
     </footer>
   );
 };

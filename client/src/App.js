@@ -15,10 +15,7 @@ function App() {
   const [isToggled, toggle] = useToggle();
   const [cityWeatherData] = useCityWeatherData(cityId);
   const { currentWeatherData, forecastWeatherData } = cityWeatherData;
-
   let tableData = tableDataHelper(forecastWeatherData);
-  // console.log("CITY FORECAST ---->", forecastWeatherData.list);
-  // Issue with 5-day Forecast endpoint, 40 data points, 8 per day. but day data leaks into next day.
 
   const handleChange = (event) => {
     setCityId(event.target.value);
@@ -26,8 +23,7 @@ function App() {
       toggle();
     }
   };
-  let imgURL =
-    "https://user-images.githubusercontent.com/69181038/130332286-46abc8ac-3f70-405d-b822-3b0e124d1334.jpg";
+
   return (
     <div className="App">
       <Navbar />

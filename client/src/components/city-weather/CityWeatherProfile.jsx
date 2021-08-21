@@ -7,6 +7,7 @@ const CityWeatherProfile = (props) => {
   const { weather, main, wind, toggle, isToggled, tableData } = props;
   const mainDescription = weather && weather[0].main;
   const description = weather && weather[0].description;
+  const icon = weather && weather[0].icon;
   const temperature =
     weather && cityProfileHelpers.temperatureConversion(main.temp);
   const windSpeed = wind && cityProfileHelpers.windSpeedConversion(wind.speed);
@@ -15,7 +16,13 @@ const CityWeatherProfile = (props) => {
     <div>
       <section className="city-profile">
         <article>
-          <h2>{mainDescription}</h2>
+          <h2>
+            {mainDescription}{" "}
+            <img
+              src={`http://openweathermap.org/img/w/${icon}.png`}
+              alt="weather icon"
+            />
+          </h2>
           <p>{description}</p>
         </article>
         <article>
