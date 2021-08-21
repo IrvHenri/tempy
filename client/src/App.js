@@ -48,6 +48,18 @@ function App() {
   }, [cityId]);
   const { currentWeatherData, forecastWeatherData } = cityWeatherData;
 
+  let forcastList = forecastWeatherData && forecastWeatherData.list;
+  let tableData = [];
+  let index = 0;
+
+  if (forcastList) {
+    while (index < forcastList.length) {
+      let copiedForcastList = [...forcastList];
+      tableData.push([copiedForcastList.splice(index, 8)]);
+      index += 8;
+    }
+  }
+
   return (
     <div className="App">
       <h1>WEATHER RADAR</h1>
@@ -62,6 +74,7 @@ function App() {
           {...currentWeatherData}
           isToggled={isToggled}
           toggle={toggle}
+          tableData={tableData}
         />
       )}
     </div>
