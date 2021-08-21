@@ -9,10 +9,14 @@ const Footer = () => {
         <p>By Irving Henriquez</p>
       </span>
       <div className="footer-socials">
-        <a href="https://github.com/IrvHenri" target="_blank">
+        <a href="https://github.com/IrvHenri" target="_blank" rel="noreferrer">
           <FaGithub />
         </a>
-        <a href="https://www.linkedin.com/in/irving-henriquez/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/irving-henriquez/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaLinkedin />
         </a>
       </div>
