@@ -1,18 +1,22 @@
+import { useState } from "react";
 import "./App.css";
-import { useState, useEffect } from "react";
-import axios from "axios";
 import SelectMenu from "./components/select-menu/SelectMenu";
 import CityWeatherProfile from "./components/city-weather/CityWeatherProfile";
 import useToggle from "./hooks/useToggle";
+import useCityData from "./hooks/useCityData";
+import useCityWeatherData from "./hooks/useCityWeatherData";
+import tableDataHelper from "./helpers/TableDataHelper";
 
 function App() {
-  const [isToggled, toggle] = useToggle();
-  const [cityData, setCityData] = useState([]);
   const [cityId, setCityId] = useState("");
-  const [cityWeatherData, setCityWeatherData] = useState({
-    currentWeatherData: {},
-    forecastWeatherData: {},
-  });
+  const [cityData] = useCityData();
+  const [isToggled, toggle] = useToggle();
+  const [cityWeatherData] = useCityWeatherData(cityId);
+  const { currentWeatherData, forecastWeatherData } = cityWeatherData;
+
+  let tableData = tableDataHelper(forecastWeatherData);
+  // console.log("CITY FORECAST ---->", forecastWeatherData.list);
+  // Issue with 5-day Forecast endpoint, 40 data points, 8 per day. but day data leaks into next day.
 
   const handleChange = (event) => {
     setCityId(event.target.value);
@@ -20,44 +24,6 @@ function App() {
       toggle();
     }
   };
-
-  useEffect(() => {
-    axios
-      .get("/api/cities")
-      .then((response) => {
-        setCityData(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
-
-  useEffect(() => {
-    if (cityId) {
-      axios
-        .get(`/api/cities/${cityId}/weather-data`)
-        .then((response) => {
-          const { currentWeatherData, forecastWeatherData } = response.data;
-          setCityWeatherData({ currentWeatherData, forecastWeatherData });
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }
-  }, [cityId]);
-  const { currentWeatherData, forecastWeatherData } = cityWeatherData;
-
-  let forcastList = forecastWeatherData && forecastWeatherData.list;
-  let tableData = [];
-  let index = 0;
-
-  if (forcastList) {
-    while (index < forcastList.length) {
-      let copiedForcastList = [...forcastList];
-      tableData.push([copiedForcastList.splice(index, 8)]);
-      index += 8;
-    }
-  }
 
   return (
     <div className="App">

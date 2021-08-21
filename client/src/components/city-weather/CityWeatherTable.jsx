@@ -60,7 +60,7 @@ const CityWeatherTable = ({ tableData }) => {
                 return row.map((cell, index) => (
                   <TableRow key={index}>
                     <TableCell component="th" scope="row">
-                      {convertDate(cell.dt_txt)}
+                      {convertDate(cell.dt)}
                     </TableCell>
                     <TableCell align="right">
                       {temperatureConversion(cell.main.temp)}
