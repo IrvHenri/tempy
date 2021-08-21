@@ -5,7 +5,7 @@ A react application that allows users to select a city which displays the curren
 
 
 ### Live Demo: 
-[tempy](https://distracted-pare-332419.netlify.app/)
+[tempy]()
 
 ### Preview 
 
