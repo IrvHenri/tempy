@@ -1,7 +1,7 @@
 import React from "react";
-import * as cityProfileHelpers from "../helpers/CityProfileHelpers";
+import * as cityProfileHelpers from "../../helpers/CityProfileHelpers";
 import CityWeatherTable from "./CityWeatherTable";
-
+import Button from "@material-ui/core/Button";
 const CityWeatherProfile = (props) => {
   const { weather, main, wind, toggle, isToggled, tableData } = props;
   const mainDescription = weather && weather[0].main;
@@ -21,9 +21,13 @@ const CityWeatherProfile = (props) => {
         <p>{windSpeed}</p>
       </article>
       {!isToggled ? (
-        <button onClick={toggle}>See Forecast</button>
+        <Button onClick={toggle} variant="contained">
+          See Forecast
+        </Button>
       ) : (
-        <button onClick={toggle}>Close</button>
+        <Button onClick={toggle} variant="contained">
+          Close
+        </Button>
       )}
       {isToggled && <CityWeatherTable tableData={tableData} />}
     </div>

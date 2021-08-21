@@ -1,4 +1,4 @@
-import { fromUnixTime, format } from "date-fns";
+import { format } from "date-fns";
 
 //Convert Kelvin to C
 export const temperatureConversion = (kelvin) => {
@@ -19,4 +19,8 @@ export const windSpeedConversionTableCell = (wind) => {
 
 export const convertDate = (timeString) => {
   return format(new Date(timeString), "dd MMM ha");
+};
+
+export const convertDateTableButton = (timeString) => {
+  return format(new Date(timeString), "dd MMM");
 };

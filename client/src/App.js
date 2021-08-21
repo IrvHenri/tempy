@@ -1,8 +1,8 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import SelectMenu from "./components/SelectMenu";
-import CityWeatherProfile from "./components/CityWeatherProfile";
+import SelectMenu from "./components/select-menu/SelectMenu";
+import CityWeatherProfile from "./components/city-weather/CityWeatherProfile";
 import useToggle from "./hooks/useToggle";
 
 function App() {
@@ -38,7 +38,6 @@ function App() {
         .get(`/api/cities/${cityId}/weather-data`)
         .then((response) => {
           const { currentWeatherData, forecastWeatherData } = response.data;
-
           setCityWeatherData({ currentWeatherData, forecastWeatherData });
         })
         .catch((error) => {
