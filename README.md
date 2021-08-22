@@ -4,8 +4,6 @@ A react application that allows users to select a city which displays the curren
 
 
 
-### Live Demo: 
-[tempy]()
 
 ### Preview 
 
@@ -29,8 +27,8 @@ A react application that allows users to select a city which displays the curren
 ## Get Started
 
 1. Fork and clone this repository.
-2. Cd into server and install server dependencies with `npm install`.
-3. Both servers run concurrently; requests are proxied from a heroku server.
+2. cd into server and install server dependencies with `npm install`. (Optional as client is now proxied to heroku server)
+3. cd into client , yarn start to start development server
 4. Visit <http://localhost:3000/> in your browser.
 
 ## Client Dependencies
@@ -38,7 +36,6 @@ A react application that allows users to select a city which displays the curren
 - axios: "^0.21.1",
 - material-ui/core": "^4.12.3"
 - date-fns: "^2.23.0",
-- normalize.css: "^8.0.1",
 - react: "^17.0.2",
 - react-icons: "^4.2.0",
 - react-scripts": "4.0.3"
