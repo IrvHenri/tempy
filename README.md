@@ -7,6 +7,9 @@ A react application that allows users to select a city which displays the curren
 
 ### Preview 
 
+### Live Demo: 
+[Tempy](https://nostalgic-spence-b7a949.netlify.app/)
+
 #### Home
 <img width="500" alt="tempy home page" src="https://user-images.githubusercontent.com/69181038/130336966-248172e6-74c4-4c9d-b02b-278365ca1f29.png">
 
