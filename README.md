@@ -39,7 +39,7 @@ A react application that allows users to select a city which displays the curren
 
 1. Fork and clone this repository.
 2. cd into server and install server dependencies with `npm install`. (Optional as client is now proxied to heroku server)
-3. cd into client , yarn start to start development server
+3. cd into client , run `yarn` to install dependencies then `yarn start` to start development server
 4. Visit <http://localhost:3000/> in your browser.
 
 ## Client Dependencies
