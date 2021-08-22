@@ -17,6 +17,17 @@ A react application that allows users to select a city which displays the curren
 #### Expand City's Weather Forecast
 <img width="500" alt="expand city forecast" src="https://user-images.githubusercontent.com/69181038/130336998-21425e83-9d8e-49df-9ca2-99df80289582.png">
 
+#### Express API Endpoints
+
+- [City Data](https://tempy-api.herokuapp.com/api/cities)
+
+- [Toronto City Weather](https://tempy-api.herokuapp.com/api/cities/6167865/weather-data)
+
+
+## Areas For Improvement
+
+- Implement dynamic background image with geolocation ( à la The Weather Network)
+- Fix client hosting issue regarding "Invalid Host header".   
 
 ## Tech Stack
 
@@ -28,7 +39,7 @@ A react application that allows users to select a city which displays the curren
 
 1. Fork and clone this repository.
 2. cd into server and install server dependencies with `npm install`. (Optional as client is now proxied to heroku server)
-3. cd into client , yarn start to start development server
+3. cd into client , run `yarn` to install dependencies then `yarn start` to start development server
 4. Visit <http://localhost:3000/> in your browser.
 
 ## Client Dependencies
