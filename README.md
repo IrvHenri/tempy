@@ -30,7 +30,7 @@ A react application that allows users to select a city which displays the curren
 ## Areas For Improvement
 
 - Implement dynamic background image with geolocation ( à la The Weather Network)
-- Fix client hosting issue regarding "Invalid Host header".   
+- Finish navbar features with react-router and add location pages based on user search results.   
 
 ## Tech Stack
 
