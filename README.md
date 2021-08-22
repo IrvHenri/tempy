@@ -17,7 +17,7 @@ A react application that allows users to select a city which displays the curren
 #### Expand City's Weather Forecast
 <img width="500" alt="expand city forecast" src="https://user-images.githubusercontent.com/69181038/130336998-21425e83-9d8e-49df-9ca2-99df80289582.png">
 
-#### API Endpoints
+#### Express API Endpoints
 
 - [City Data](https://tempy-api.herokuapp.com/api/cities)
 
