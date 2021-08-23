@@ -30,7 +30,8 @@ A react application that allows users to select a city which displays the curren
 ## Areas For Improvement
 
 - Implement dynamic background image with geolocation ( à la The Weather Network)
-- Finish navbar features with react-router and add location pages based on user search results.   
+- Finish navbar features with react-router and add location pages based on user search results.
+- Openweathermap API for 5day forcast data is unevenly distributed. Leads to inconsistencies in the toggle buttons. Days blend into the next day. I divided the 40     items by 5 giving each toggle view 8 data points. 
 
 ## Tech Stack
 
